@@ -10,7 +10,7 @@ We use HTTP with a loop over WS subscription for resilience. A subscription on L
 
 ### Clone repo
 ```
-git clone https://github.com/stalker474/sync_caller
+git clone https://github.com/AmpleSense-DAO/sync_caller
 ```
 
 ### Install npm
