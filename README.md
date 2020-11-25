@@ -20,6 +20,7 @@ sudo apt install npm
 
 ### Install dependencies
 ```
+cd sync_caller
 npm install
 ```
 
