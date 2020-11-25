@@ -9,7 +9,6 @@ const UFragmentsContract = require("./contracts/UFragments.json")
 const UniswapPairContract = require("./contracts/uniswap-pair.json")
 const CONF = require("./conf.json")
 
-const hostname = '127.0.0.1';
 const port = CONF.port;
 
 var last_total_supply = null;
@@ -209,7 +208,7 @@ app.get('/', (req, res) => {
   res.send(logMessages)
 })
 
-app.listen(port, hostname, async () => {
-  log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, async () => {
+  log(`Server running on port ${port}/`);
   await script_machine()
 });
