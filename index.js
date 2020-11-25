@@ -50,6 +50,7 @@ const script_machine = async () => {
   let gas_price = CONF.default_gas_price
   let gas_tries = 0
   let pending_tries = 0
+  let supply = BigInt("0")
 
   let state = STATE.INIT
   
@@ -72,7 +73,7 @@ const script_machine = async () => {
         log("Checking AMPL total supply...")
 
         log("Last total supply: " + last_total_supply)
-        let supply = BigInt(await ampl.methods.totalSupply().call())
+        supply = BigInt(await ampl.methods.totalSupply().call())
         if(supply === last_total_supply) {
           log("Total supply didn't change, nothing to do")
           state = STATE.DONE
